@@ -12,7 +12,7 @@ public class Book {
     @Id
     String id;
 
-    String name;
+    String bookName;
 
     String isbn;
 
@@ -33,12 +33,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
     public String getIsbn() {

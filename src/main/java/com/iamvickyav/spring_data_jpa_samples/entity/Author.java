@@ -15,7 +15,7 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.UUID)
     String id;
 
-    String name;
+    String authorName;
 
     String country;
 
@@ -37,12 +37,12 @@ public class Author {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
     public String getCountry() {
@@ -75,5 +75,10 @@ public class Author {
 
     public void setBooks(List<Book> books) {
         this.books = books;
+    }
+
+
+    public void addBook(Book b) {
+        this.getBooks().add(b);
     }
 }
