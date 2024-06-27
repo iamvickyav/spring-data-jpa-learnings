@@ -11,3 +11,12 @@ public interface AddressRepository {
   List<Address> findByZipCode(String zipCode);
 }
 ```
+
+* Delete In Bulk
+
+```
+@Modifying
+@Query("delete from User u where u.role.id = ?1")
+void deleteInBulkByRoleId(long roleId);
+```
+
